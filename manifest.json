@@ -1,0 +1,24 @@
+{
+    "name": "Oscaro scrapper",
+    "description": "Scrap the site by parts",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.oscaro.com/*"
+        ],
+        "all_frames": true,
+        "js": ["content-script.js"]
+      }
+    ],
+    
+    "browser_action": {
+        "default_title": "scrap oscaro.com.",
+        "default_icon": "oscar.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+  }
